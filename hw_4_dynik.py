@@ -47,7 +47,7 @@ for number in resulted_list:
 
 # Task 5.
 print('# Task 5')
-given_text = 'one two free one one free free two four'
+given_text = 'one two three one one three three two four'
 dict_1 = {}  # Create new empty dictionary
 for word in given_text.split():
     dict_1[word] = given_text.split().count(word)  # Fill the dictionary with words and their count
