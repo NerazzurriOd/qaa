@@ -3,65 +3,65 @@ from string import ascii_lowercase
 from random import randint, sample, choice
 from functools import reduce
 
-# # Task 1
-# print('Task 1')
-#
-#
-# def entered_sides() -> float:    # Read sides
-#     sides = float(input('Enter side:'))
-#     return sides
-#
-#
-# # Check if it is a square
-# def is_square(side_1, side_2, side_3, side_4) -> bool:
-#     if side_1 == side_2 == side_3 == side_4:
-#         return True
-#     return False
-#
-#
-# # Check if it is a rectangle
-# def is_rectangle(side_1, side_2, side_3, side_4) -> bool:
-#     if (side_1 ** 2) + (side_2 ** 2) == (side_3 ** 2) + (side_4 ** 2):
-#         return True
-#     return False
-#
-#
-# # Calculate rectangle area
-# def square_rectangle(side_1, side_2) -> float:
-#     return side_1 * side_2
-#
-#
-# # Asking the user to enter 4 sides
-# side_a = entered_sides()
-# side_b = entered_sides()
-# side_c = entered_sides()
-# side_d = entered_sides()
-#
-#
-# # Informing the user if it is a rectangle or square and their area
-# if is_rectangle(side_a, side_b, side_c, side_d):
-#     print(f'It\'s a rectangle. Area of rectangle is: {square_rectangle(side_a, side_b)}')
-# else:
-#     print('It\'s not a rectangle')
-#
-#
-# # Task 2
-# print('Task 2')
-#
-#
-# def generate_email(name, domain) -> str:
-#     random_number = randint(100, 999)
-#     random_string = ''.join(sample(ascii_lowercase, randint(5, 7)))
-#     domain = random.choice(domains)
-#     name = random.choice(names).lower()
-#
-#     return f'{name}.{random_number}@{random_string}.{domain}'
-#
-#
-# names = ['Amazon', 'Google', 'Yahoo', 'Ebay', 'Aliexpress']
-# domains = ['com', 'ua', 'pro', 'com.ua', 'org']
-#
-# print(generate_email(names, domains))
+# Task 1
+print('Task 1')
+
+
+def entered_sides() -> float:    # Read sides
+    sides = float(input('Enter side:'))
+    return sides
+
+
+# Check if it is a square
+def is_square(side_1, side_2, side_3, side_4) -> bool:
+    if side_1 == side_2 == side_3 == side_4:
+        return True
+    return False
+
+
+# Check if it is a rectangle
+def is_rectangle(side_1, side_2, side_3, side_4) -> bool:
+    if (side_1 ** 2) + (side_2 ** 2) == (side_3 ** 2) + (side_4 ** 2):
+        return True
+    return False
+
+
+# Calculate rectangle area
+def square_rectangle(side_1, side_2) -> float:
+    return side_1 * side_2
+
+
+# Asking the user to enter 4 sides
+side_a = entered_sides()
+side_b = entered_sides()
+side_c = entered_sides()
+side_d = entered_sides()
+
+
+# Informing the user if it is a rectangle or square and their area
+if is_rectangle(side_a, side_b, side_c, side_d):
+    print(f'It\'s a rectangle. Area of rectangle is: {square_rectangle(side_a, side_b)}')
+else:
+    print('It\'s not a rectangle')
+
+
+# Task 2
+print('Task 2')
+
+
+def generate_email(name, domain) -> str:
+    random_number = randint(100, 999)
+    random_string = ''.join(sample(ascii_lowercase, randint(5, 7)))
+    domain = random.choice(domains)
+    name = random.choice(names).lower()
+
+    return f'{name}.{random_number}@{random_string}.{domain}'
+
+
+names = ['Amazon', 'Google', 'Yahoo', 'Ebay', 'Aliexpress']
+domains = ['com', 'ua', 'pro', 'com.ua', 'org']
+
+print(generate_email(names, domains))
 
 # Task 3
 print('Task 3')
