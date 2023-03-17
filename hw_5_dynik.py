@@ -52,10 +52,10 @@ print('Task 2')
 def generate_email(name, domain) -> str:
     random_number = randint(100, 999)
     random_string = ''.join(sample(ascii_lowercase, randint(5, 7)))
-    domain = random.choice(domains)
-    name = random.choice(names).lower()
+    random_domain = random.choice(domain)
+    random_name = random.choice(name).lower()
 
-    return f'{name}.{random_number}@{random_string}.{domain}'
+    return f'{random_name}.{random_number}@{random_string}.{random_domain}'
 
 
 names = ['Amazon', 'Google', 'Yahoo', 'Ebay', 'Aliexpress']
