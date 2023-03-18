@@ -7,7 +7,7 @@ from functools import reduce
 print('Task 1')
 
 
-def entered_sides() -> float:    # Read sides
+def entered_sides() -> float:  # Read sides
     sides = float(input('Enter side:'))
     return sides
 
@@ -37,19 +37,17 @@ side_b = entered_sides()
 side_c = entered_sides()
 side_d = entered_sides()
 
-
 # Informing the user if it is a rectangle or square and their area
 if is_rectangle(side_a, side_b, side_c, side_d):
     print(f'It\'s a rectangle. Area of rectangle is: {square_rectangle(side_a, side_b)}')
 else:
     print('It\'s not a rectangle')
 
-
 # Task 2
 print('Task 2')
 
 
-def generate_email(name, domain) -> str:
+def generate_email(name: list, domain: list) -> str:
     random_number = randint(100, 999)
     random_string = ''.join(sample(ascii_lowercase, randint(5, 7)))
     random_domain = random.choice(domain)
