@@ -63,13 +63,14 @@ add_or_subtract(datetime(2020, 2, 15), 15, False)
 
 # Task 4
 def calculate_age(birthdate):
-    now = datetime.now()
-    age_timedelta = now - birthdate
-    print(age_timedelta)
-    return now, now.timestamp()
+    today = datetime.now()
+    is_year_complete = (today.month, today.day) < (birthdate.month, birthdate.day)
+    age = today.year - birthdate.year - is_year_complete
+    return age, int(birthdate.timestamp())
 
 
-birthdate = datetime(1995, 6, 15, 12, 0, 0)
-now, timestamp = calculate_age(birthdate)
-print(timestamp)
-print('Ваш возраст', timestamp // (60 * 60 * 24 * 365.25), 'лет')
+birthdate = datetime(1987, 5, 15, 11, 22, 40)
+age, birthdate_timestamp = calculate_age(birthdate)
+
+print("Your age", age)
+print("Date of birth in timestamp format:", birthdate_timestamp)
