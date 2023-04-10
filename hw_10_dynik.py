@@ -24,7 +24,7 @@ multiply_function(2, 5)
 
 
 # Task 2
-list_of_numbers = [randint(1, 10) for item in range(1, 101)]
+list_of_numbers = [randint(1, 10) for item in range(100)]
 print(list_of_numbers)
 dict_count_numbers = {num: list_of_numbers.count(num) for num in set(list_of_numbers)}
 for num, count in dict_count_numbers.items():
