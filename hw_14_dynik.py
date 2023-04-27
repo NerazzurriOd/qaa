@@ -8,10 +8,10 @@ class Train:
         self.speed = 0
 
     def accelerate(self, speed_increase):
-        self.speed += speed_increase  # збільшуємо швидкість на speed_increase км/год
+        self.speed += speed_increase
 
     def brake(self, speed_decrease):
-        self.speed -= speed_decrease  # зменшуємо швидкість на speed_decrease км/год
+        self.speed -= speed_decrease
 
     def add_train_car(self, train_car):
         self.train_car.append(train_car)
