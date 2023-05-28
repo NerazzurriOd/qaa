@@ -7,7 +7,7 @@ class Painting(ABC):
         self._title = None
         self._year = None
         self._price = None
-        self.copies_number = None
+        self._copies_number = None
 
     @property
     def author(self):
@@ -40,6 +40,14 @@ class Painting(ABC):
     @price.setter
     def price(self, new_price):
         self._price = new_price
+
+    @property
+    def copies_number(self):
+        return self._copies_number
+
+    @copies_number.setter
+    def copies_number(self, new_copies_number):
+        self._copies_number = new_copies_number
 
     def display_info(self):
         print(f'Title: {self._title}')
