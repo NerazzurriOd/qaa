@@ -58,7 +58,7 @@ def test_feedback_page():
         driver.quit()
 
 
-# 3. Check ability to write feedback
+# 4. Check ability to write feedback
 def test_ability_to_write_feedback():
     driver = Chrome('hw_18/drivers/chromedriver.exe')
     try:
@@ -94,7 +94,7 @@ def test_ability_to_write_feedback():
         driver.quit()
 
 
-# 4. Check add to favorite functionality
+# 5. Check add to favorite functionality
 def test_add_to_favorite():
     driver = Chrome('hw_18/drivers/chromedriver.exe')
     try:
@@ -113,7 +113,7 @@ def test_add_to_favorite():
         driver.quit()
 
 
-# 5. Check delete car from favorite list
+# 6. Check delete car from favorite list
 def test_delete_from_favorite():
     driver = Chrome('hw_18/drivers/chromedriver.exe')
     try:
