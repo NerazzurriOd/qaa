@@ -17,8 +17,7 @@ class OrderPart:
         total_price = sum(dish.get_price() for dish in self.order)
         return total_price
 
-    @staticmethod
-    def get_dish(dish_type):
+    def get_dish(self, dish_type):
         if dish_type == "Risotto":
             return Risotto('Vialone Nano', 125, 'Semifino Vialone Nano rice')
         elif dish_type == "Pasta":

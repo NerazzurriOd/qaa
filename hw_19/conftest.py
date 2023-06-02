@@ -3,6 +3,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 import pytest
 # from pages.dashboard import Dashboard
 from hw_19.pages.dashboard import Dashboard
+from hw_19.pages.feedbackpage import Feedback
 
 
 @pytest.fixture(scope='session')
@@ -19,3 +20,8 @@ def driver():
 @pytest.fixture
 def dashboard(driver):
     yield Dashboard(driver)
+
+
+@pytest.fixture
+def feedback(driver):
+    yield Feedback(driver)
