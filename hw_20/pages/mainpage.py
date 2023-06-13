@@ -1,5 +1,7 @@
 from hw_20.pages.basepage import BasePage
 from hw_20.pages.category_kitchen_technique import CategoryPickPage
+from hw_20.pages.login_form import LoginForm
+
 from hw_20.core.locator import Locator
 from hw_20.locators.mainpage_locators import MainPageLocators
 
@@ -12,6 +14,7 @@ class MainPage(BasePage):
         self.__footer_text_locator = MainPageLocators().footer_text_locator
         self.__sellers_menu_locator = MainPageLocators().sellers_menu_locator
         self.__logo_locator = MainPageLocators().logo_locator
+        self.__profile_locator = MainPageLocators().profile_locator
 
     def click_on_navbar(self):
         self._click(self.__nav_bar_locator)
@@ -38,3 +41,7 @@ class MainPage(BasePage):
 
     def find_logo(self):
         return self._wait_until_element_appears(self.__logo_locator)
+
+    def click_on_profile(self):
+        self._click(self.__profile_locator)
+        return LoginForm(self.driver)

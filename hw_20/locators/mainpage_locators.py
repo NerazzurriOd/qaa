@@ -9,6 +9,7 @@ class MainPageLocators:
         self.__sellers_menu_locator = Locator('xpath',
                                               '//div[@class="mh-button__wrap"]/a[contains(text(), "Покупцям")]')
         self.__logo_locator = Locator('xpath', '//div[@class="mh__sr"]/a[@class="v-logo"]')
+        self.__profile_locator = Locator('xpath', '//div[@class="mh-profile"]/button')
 
     @property
     def nav_bar_locator(self):
@@ -29,3 +30,7 @@ class MainPageLocators:
     @property
     def logo_locator(self):
         return self.__logo_locator
+
+    @property
+    def profile_locator(self):
+        return self.__profile_locator

@@ -41,3 +41,22 @@ def test_return_to_home_page(mainpage):
     mainpage.choose_sellers_subpages('Доставка і оплата')
     mainpage.find_logo().click()
     assert mainpage.check_link('https://allo.ua/')
+
+
+def test_check_login(mainpage, login_form):
+    mainpage.click_on_profile()
+    time.sleep(2)
+    login_form.login()
+    time.sleep(7)
+
+
+def test_add_item_to_basket(mainpage, login_form, kitchen_technique):
+    mainpage.click_on_profile()
+    login_form.login()
+    time.sleep(2)
+    mainpage.click_on_navbar()
+    time.sleep(3)
+    pick_subcategory = mainpage.choose_subcategory('Побутова техніка')
+    kitchen_technique.choose_kitchen_technique_category()
+
+
