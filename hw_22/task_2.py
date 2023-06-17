@@ -2,7 +2,7 @@ import requests
 import json
 
 
-class APIWrapper:
+class APIReader:
     def __init__(self, api_url):
         self.api_url = api_url
 
@@ -20,5 +20,5 @@ if __name__ == '__main__':
     api_url = 'https://randomuser.me/api/'
     filename = 'random_user.json'
 
-    api_wrapper = APIWrapper(api_url)
+    api_wrapper = APIReader(api_url)
     api_wrapper.get_data_and_save(filename)
